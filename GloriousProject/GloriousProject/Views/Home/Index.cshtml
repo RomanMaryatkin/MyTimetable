@@ -1,0 +1,36 @@
+﻿@model List<Lesson>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lessons</title>
+</head>
+<body>
+    <div>
+        @foreach (Lesson item in Model)
+        {
+            <hr>
+            <p>Аудитория: @item.Auditorium</p>
+            <p>Здание: @item.Building</p>
+            <p>Дата: @item.Date</p>
+            <p>Время: @item.BeginLesson - @item.EndLesson</p>
+            <p>Предмет: @item.Name</p>
+            <p>Преподаватель: @item.Lecturer</p>
+            <p>Тип пары: @item.Type</p>
+            <a href="/home/Delete?date=@(item.Date)&time=@(item.BeginLesson)&lecturer=@(item.Lecturer)&status=@(item.Status)&id=@(item.Id)">Удалить</a>
+        }
+    </div>
+    <br>
+    <div>
+        <a asp-action="LessonsAdd">show creation menu</a>
+    </div>
+    <br>
+    <a href="/Home/Index?week=@(ViewBag.Week+1)">Следующая неделя  </a>
+    <a href="/Home/Index?week=@(ViewBag.Week-1)">Прошлая неделя</a>
+</body>
+</html>

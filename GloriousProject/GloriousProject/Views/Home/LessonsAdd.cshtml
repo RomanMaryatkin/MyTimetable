@@ -1,0 +1,56 @@
+﻿@model Lesson
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LessonAdd</title>
+</head>
+<body>
+    <form asp-for="Form" method="post">
+        <div>
+            <label asp-for="Auditorium">Auditorium :</label>
+            <input asp-for="Auditorium" type="text" name="Auditorium" />
+        </div>
+        <div>
+            <label asp-for="BeginLesson">BeginLesson :</label>
+            <input asp-for="BeginLesson" type="text" name="BeginLesson" />
+        </div>
+        <div>
+            <label asp-for="EndLesson">EndLesson :</label>
+            <input asp-for="EndLesson" type="text" name="EndLesson" />
+        </div>
+        <div>
+            <label asp-for="Building">Building :</label>
+            <input asp-for="Building" type="text" name="Building" />
+        </div>
+        <div>
+            <label asp-for="Date">Date :</label>
+            <input asp-for="Date" type="text" name="Date" />
+        </div>
+        <div>
+            <label asp-for="Name">Name :</label>
+            <input asp-for="Name" type="text" name="Name" />
+        </div>
+        <div>
+            <label asp-for="Type">Type :</label>
+            <input asp-for="Type" type="text" name="Type" />
+        </div>
+        <div>
+            <label asp-for="Lecturer">Lecturer :</label>
+            <input asp-for="Lecturer" type="text" name="Lecturer" />
+        </div>
+        <div>
+            <label asp-for="Status">Status :</label>
+            <input asp-for="Status" type="text" name="Status" value="Add"/>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
